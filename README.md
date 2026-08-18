@@ -1,70 +1,70 @@
-\# BALQUAD - STM32F767ZI Quadcopter Flight Controller
+# BALQUAD - STM32F767ZI Quadcopter Flight Controller
 
 
 
-BALQUAD is a quadcopter flight controller project developed step-by-step using the \*\*NUCLEO-F767ZI\*\* development board and \*\*STM32 HAL drivers\*\*.
+BALQUAD is a quadcopter flight controller project developed step-by-step using the **NUCLEO-F767ZI** development board and **STM32 HAL drivers**.
 
 
 
-The project follows the development stages of the M-HIVE STM32 Drone Programming Course firmware while adapting the implementation from \*\*STM32F405 + LL drivers\*\* to \*\*STM32F767ZI + HAL drivers\*\*.
+The project follows the development stages of the M-HIVE STM32 Drone Programming Course firmware while adapting the implementation from **STM32F405 + LL drivers** to **STM32F767ZI + HAL drivers**.
 
 
 
-\## Hardware
+## Hardware
 
 
 
-\* MCU: STM32F767ZI
+* MCU: STM32F767ZI
 
-\* Development Board: NUCLEO-F767ZI
+* Development Board: NUCLEO-F767ZI
 
-\* IDE: STM32CubeIDE
+* IDE: STM32CubeIDE
 
-\* Driver Library: STM32 HAL
-
-
-
-\## Development Progress
+* Driver Library: STM32 HAL
 
 
 
-\* \[x] V1.1 - Debug LED
-
-\* \[ ] V1.2 - Debug Buzzer
-
-\* \[ ] V1.3 - Debug UART
-
-\* \[ ] V2.1 - BNO080
-
-\* \[ ] V2.2 - ICM20602
-
-\* \[ ] V2.3 - LPS22HH
-
-\* \[ ] GPS
-
-\* \[ ] RC Receiver
-
-\* \[ ] ESC / Motor PWM
-
-\* \[ ] EEPROM
-
-\* \[ ] Battery Monitoring
-
-\* \[ ] Telemetry
-
-\* \[ ] Safety / Failsafe
-
-\* \[ ] PID Control
-
-\* \[ ] Roll \& Pitch Control
-
-\* \[ ] Yaw Rate Control
-
-\* \[ ] Yaw Heading Control
+## Development Progress
 
 
 
-\## V1.1 - Debug LED
+* [x] V1.1 - Debug LED
+
+* [ ] V1.2 - Debug Buzzer
+
+* [ ] V1.3 - Debug UART
+
+* [ ] V2.1 - BNO080
+
+* [ ] V2.2 - ICM20602
+
+* [ ] V2.3 - LPS22HH
+
+* [ ] GPS
+
+* [ ] RC Receiver
+
+* [ ] ESC / Motor PWM
+
+* [ ] EEPROM
+
+* [ ] Battery Monitoring
+
+* [ ] Telemetry
+
+* [ ] Safety / Failsafe
+
+* [ ] PID Control
+
+* [ ] Roll \& Pitch Control
+
+* [ ] Yaw Rate Control
+
+* [ ] Yaw Heading Control
+
+
+
+
 
 
 
@@ -76,77 +76,21 @@ The three onboard LEDs are controlled using STM32 HAL GPIO functions.
 
 
 
-\### Used Pins
+### Used Pins
+
+
+* LD1: PB0
+
+* LD2: PB7
+
+* LD3: PB14
 
 
 
-\* LD1: PB0
-
-\* LD2: PB7
-
-\* LD3: PB14
 
 
 
-\### HAL Function
-
-
-
-```c
-
-HAL\_GPIO\_TogglePin(GPIOB,
-
-&#x20;                  GPIO\_PIN\_0 |
-
-&#x20;                  GPIO\_PIN\_7 |
-
-&#x20;                  GPIO\_PIN\_14);
-
-```
-
-
-
-The LEDs toggle every 1 second using:
-
-
-
-```c
-
-HAL\_Delay(1000);
-
-```
-
-
-
-\## Project Structure
-
-
-
-Each completed development stage is stored as a separate STM32CubeIDE project.
-
-
-
-```text
-
-V1.1\_Debug\_LED/
-
-V1.2\_Debug\_Buzzer/
-
-V1.3\_Debug\_UART/
-
-V2.1\_BNO080/
-
-...
-
-```
-
-
-
-This makes it possible to review and test each stage independently.
-
-
-
-\## Reference
+## Reference
 
 
 
@@ -154,7 +98,7 @@ This project is based on the development path of:
 
 
 
-\*\*M-HIVE STM32 Drone Programming Course - MH-FC-FW1.0\*\*
+**M-HIVE STM32 Drone Programming Course - MH-FC-FW1.0**
 
 
 
@@ -170,7 +114,7 @@ The original firmware targets STM32F405 and uses STM32 LL/HAL drivers. BALQUAD i
 
 
 
-\## License
+## License
 
 
 
