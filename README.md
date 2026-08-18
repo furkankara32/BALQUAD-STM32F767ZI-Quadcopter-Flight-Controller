@@ -30,7 +30,7 @@ The project follows the development stages of the M-HIVE STM32 Drone Programming
 
 * [x] V1.1 - Debug LED
 
-* [ ] V1.2 - Debug Buzzer
+* [x] V1.2 - Debug Buzzer
 
 * [ ] V1.3 - Debug UART
 
@@ -76,7 +76,7 @@ The three onboard LEDs are controlled using STM32 HAL GPIO functions.
 
 
 
-### Used Pins
+### Debug Leds
 
 
 * LD1: PB0
@@ -86,7 +86,12 @@ The three onboard LEDs are controlled using STM32 HAL GPIO functions.
 * LD3: PB14
 
 
+### Buzzer
 
+* Timer: TIM3
+* Channel: Channel 4
+* Pin: PB1
+* Mode: PWM
 
 
 
